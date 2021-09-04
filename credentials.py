@@ -23,5 +23,16 @@ class Credentials:
         """
         deletes a saved credential from the user list
         """ 
-        Credentials.credentials_list.remove(self)         
+        Credentials.credentials_list.remove(self)
+        
+    @classmethod
+    
+    def find_by_acc(cls,account):
+        """
+        A method that takes an account name and returns the users credentials that matches the account name
+        """
+        for account_credentials in cls.credentials_list:
+            if account_credentials.account == account:
+                return account_credentials
+            return False             
     
