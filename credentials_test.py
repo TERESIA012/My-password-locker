@@ -23,3 +23,9 @@ class TestCredentials(unittest.TestCase):
         """ 
         self.new_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
+        
+    def tearDown(self): 
+        """
+        clears up after every test is done
+        """ 
+        Credentials.credentials_list=[]    
