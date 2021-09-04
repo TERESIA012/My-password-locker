@@ -44,5 +44,10 @@ class TestUser(unittest.TestCase):
         """
         Check user and password existance
         """
-        self.test_check_user_exists=User.check_user_exists("Tess012","passWord")   
+        self.test_check_user_exists=User.check_user_exists("Tess012","passWord") 
+        
+        
+if __name__ == '__main__':
+    unittest.main()         
+                 
         
