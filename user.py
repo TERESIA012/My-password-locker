@@ -21,4 +21,13 @@ class User:
         """
         deletes a saved contact from the user list
         """ 
-        User.user_list.remove(self)       
+        User.user_list.remove(self)
+        
+    @classmethod
+    def check_user(cls,username):
+        """
+        method that runs in a user"s username  and returns a user that matches it
+        """  
+        for user in cls.user_list:
+            if user.username == username:
+             return user
