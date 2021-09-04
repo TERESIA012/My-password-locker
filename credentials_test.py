@@ -28,4 +28,13 @@ class TestCredentials(unittest.TestCase):
         """
         clears up after every test is done
         """ 
-        Credentials.credentials_list=[]    
+        Credentials.credentials_list=[] 
+        
+    def test_multiple_credentials(self):
+        """
+        tests whether we can save multiple credentials in the credentials list
+        """
+        self.new_credentials.save_credentials()
+        test_credentials=Credentials("facebook","tess012","passWORD")
+        test_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list),2)       
