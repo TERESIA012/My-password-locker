@@ -41,5 +41,17 @@ class Credentials:
         """
         displays the list in the credential_list
         """ 
-        return cls.credentials_list                
+        return cls.credentials_list
+    
+    # @classmethod
+    # def random_password(passwordLength=13):
+    #     """
+    #     generates random password for a user
+    #     """ 
+         
+        
+    #     password = string.ascii_letters + string.digits + '!@#$%^&*()'
+    #     random.seed = (os.urandom(1024))
+
+    #     return ''.join(random.choice(password) for i in range(passwordLength))                
     
