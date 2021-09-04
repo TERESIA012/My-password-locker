@@ -16,3 +16,10 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.account,"facebook")
         self.assertEqual(self.new_credentials.username,"terry012") 
         self.assertEqual(self.new_credentials.password,"passLock") 
+        
+    def test_save_credentials(self):
+        """
+        test whether credentials are saved in the credentials_list
+        """ 
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
