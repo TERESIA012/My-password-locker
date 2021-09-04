@@ -38,5 +38,11 @@ class TestUser(unittest.TestCase):
         """
         check whether the user appears in the user list
         """
-        self.check_user=User.check_user("Tess012")                 
+        self.check_user=User.check_user("Tess012") 
+    
+    def test_check_user_exists(self):
+        """
+        Check user and password existance
+        """
+        self.test_check_user_exists=User.check_user_exists("Tess012","passWord")   
         
