@@ -15,5 +15,7 @@ class TestUser(unittest.TestCase):
         """
     
         self.assertEqual(self.new_user.username,"Tess012")
-        self.assertEqual(self.new_user.password,"passWord")    
+        self.assertEqual(self.new_user.password,"passWord") 
+        
+           
         
