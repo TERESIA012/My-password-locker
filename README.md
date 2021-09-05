@@ -3,7 +3,7 @@
 
 # Description
 
-## This is an application that allows the user to create a password locker by loging in using username and password.The user can also also store password of an already existing account.The user also has an option of using their own password or allow the application to generate a random password.
+## This is an application that allows the user to create a password locker by log  in using username and password.The user can also also store password of an already existing account.The user also has an option of using their own password or allow the application to generate a random password.
 
 # Setup requirements
  - Github

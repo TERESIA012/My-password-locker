@@ -154,11 +154,11 @@ def main():
                                                 print("Create your password")
                                                 password =input()
                                             elif random =="rp":
-                                                # print("What length of password do you want?")
-                                                # length=int(input())
-                                                # set ="1qaz2wsx3edc4rfv5tgbyhn7ujm!#$^&AQL9D6GHMPX"
+                                                print("What length of password do you want?")
+                                                length=int(input())
+                                                set ="1qaz2wsx3edc4rfv5tgbyhn7ujm!#$^&AQL9D6GHMPX"
                                                 password=""
-                                                for y in range(10):
+                                                for y in range(length):
                                                     y=chr(randint(65,90)).lower()
                                                     # newpass=str(password) + y
                                                     password=password+y
