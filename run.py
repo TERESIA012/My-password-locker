@@ -160,11 +160,12 @@ def main():
                                                 password=""
                                                 for y in range(10):
                                                     y=chr(randint(65,90)).lower()
-                                                    newpass=str(password) + y
-                                                print(f"Use your password {newpass}")
-                                            # break        
+                                                    # newpass=str(password) + y
+                                                    password=password+y
+                                                print(f"Use your password {password}")
+                                            break        
                                                  
-                                        save_credentials(create_credentials(account,username,password))
+                                    save_credentials(create_credentials(account,username,password))
                                         
                                         
                                         
