@@ -86,7 +86,7 @@ def main():
     print(f'Hey {user_name}. what would you like to do?') 
     print('\n')
     while True:
-                    print("Use these short codes : ca - create account,log -login, dc - display account, fa -find account, ex -exit  ")
+                    print("Use these short codes : ca - create account,log -login,  ex -exit  ")
                     short_code = input().lower()
 
                     if short_code == 'ca':
@@ -114,7 +114,7 @@ def main():
                             if  check_user_exist(username, password):
                                 print("Logged in successfully") 
                                 while True:
-                                    print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials, del- delete credentials,lg- logout")
+                                    print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,ex- exit")
                                     short_code = input().lower()
                                     if short_code == "sc":
                                         print ("Account:")
@@ -162,10 +162,30 @@ def main():
                                                     y=chr(randint(65,90)).lower()
                                                     # newpass=str(password) + y
                                                     password=password+y
-                                                print(f"Use your password {password}")
+                                                print(f"Password has been generated successfully. Your password is {password}")
+                                                
                                             break        
                                                  
                                     save_credentials(create_credentials(account,username,password))
+                                    print('*'*20)
+                            elif short_code == "ex":
+                                print ("Thank you for reaching out to My Password Locker!Bye...")
+                                break
+                            else:
+                                print("Kindly use the shortcodes provided.")
+                    else:
+                        print("Invalid short codes.Try again!")
+  
+                            
+                    
+                                    
+                                    
+                    
+                                    
+                            
+                                     
+                                    
+                                      
                                         
                                         
                                         
