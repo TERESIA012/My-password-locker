@@ -86,7 +86,7 @@ def main():
     print(f'Hey {user_name}. what would you like to do?') 
     print('\n')
     while True:
-                    print("Use these short codes : ca - create account,log -login,  ex -exit  ")
+                    print("Use these short codes : ca - create account,log -login,  ex- exit  ")
                     short_code = input().lower()
 
                     if short_code == 'ca':
@@ -133,7 +133,7 @@ def main():
                                         if display_credentials():
                                            print("Below is a list of your credentials:")
                                            for display in display_credentials():
-                                            print(f"Account:{display.account} \n Username:{display.username} \n Password:{display.password}")
+                                             print(f"Account:{display.account} \n Username:{display.username} \n Password:{display.password}")
                                         else:
                                             print("Your credentials are not available")
                                             print("-"*20)
@@ -168,11 +168,12 @@ def main():
                                                  
                                     save_credentials(create_credentials(account,username,password))
                                     print('*'*20)
-                            elif short_code == "ex":
+                            else:
+                                print("Kindly use the shortcodes provided.")        
+                    elif short_code == "ex":
                                 print ("Thank you for reaching out to My Password Locker!Bye...")
                                 break
-                            else:
-                                print("Kindly use the shortcodes provided.")
+                            
                     else:
                         print("Invalid short codes.Try again!")
   
