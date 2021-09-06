@@ -114,7 +114,7 @@ def main():
                             if  check_user_exist(username, password):
                                 print("Logged in successfully") 
                                 while True:
-                                    print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,de -delete credentials ,ex- exit")
+                                    print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,ex- exit")
                                     short_code = input().lower()
                                     if short_code == "sc":
                                         print ("Account:")
@@ -133,22 +133,14 @@ def main():
                                         if display_credentials():
                                            print("Below is a list of your credentials:")
                                            for display in display_credentials():
-                                             print(f"Account:{display.account} \n Username:{display.username} \n Password:{display.password}")
+                                            print(f"Account:{display.account} \n Username:{display.username} \n Password:{display.password}")
                                         else:
                                             print("Your credentials are not available")
                                             print("-"*20)
-                                            
-                                    elif short_code == "de":
-                                        print("Enter the account name you would like to delete ")
-                                        account = input() 
-                                        print(f"Your {display.account} account has been deleted successfully")
-                                        # if find_by_acc (account):
-                                        #     delete_account= delete_credentials(account)
-                                        #     delete_credentials(delete_account) 
-                                        #     print(f"{delete_account.account} has been deleted ")
-                                        # else:
-                                        #     print("The account does not exist!")
-                                        #     print("-"*20)      
+                                    elif short_code=="ex":
+                                        print("You have been logged out successfully!")
+                                        break 
+                                          
                                             
                                     elif short_code =="cc":
                                         print("User")
@@ -180,10 +172,9 @@ def main():
                                                  
                                     save_credentials(create_credentials(account,username,password))
                                     print('*'*20)
-                                    
+                            
                             else:
-                                    print("Kindly use the shortcodes provided.")   
-                                     
+                                print("Kindly use the shortcodes provided.")        
                     elif short_code == "ex":
                                 print ("Thank you for reaching out to My Password Locker!Bye...")
                                 break
