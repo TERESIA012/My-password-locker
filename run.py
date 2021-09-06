@@ -114,7 +114,7 @@ def main():
                             if  check_user_exist(username, password):
                                 print("Logged in successfully") 
                                 while True:
-                                    print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,ex- exit")
+                                    print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,dc -delete credentialsex- exit")
                                     short_code = input().lower()
                                     if short_code == "sc":
                                         print ("Account:")
